@@ -1,0 +1,43 @@
+.trip-hero {
+    position: relative;
+    display: flex;
+    margin-top: 100px;
+  }
+  
+  .trip-hero-bg {
+    position: relative;
+  }
+  
+  .trip-background {
+    display: block;
+    width: 98.7vw;
+    height: 450px;
+    box-sizing: content-box;
+    object-fit: cover;
+  }
+  
+  .trip-hero-title {
+    position: absolute;
+    margin: 0 0 70px 100px;
+    color: #f7f7f7;
+    z-index: 3;
+    text-align: start;
+    bottom: 0;
+  }
+  
+  .trip-caption {
+    font-size: 70px;
+    font-weight: 600;
+  }
+  
+  .details-container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+  }
+  
+  /* .info-container {
+    margin
+  } */
+  .input-style{
+    width: 24.5%;
+}

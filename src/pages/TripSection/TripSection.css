@@ -1,0 +1,17 @@
+.trip-section {
+    margin: 100px auto;
+  }
+  
+  .total-trips {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+  }
+  
+  @media only screen and (max-width: 426px) {
+    .total-trips {
+      grid-template-columns: 1fr;
+    }
+  }
