@@ -9,7 +9,7 @@ const TripDetails = () => {
   const [trip, setTrip] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/trips/${id}`)
+    fetch(`https://pure-gorge-03532.herokuapp.com/trips/${id}`)
       .then((res) => res.json())
       .then((data) => setTrip(data))
       .catch((err) => console.log(err));

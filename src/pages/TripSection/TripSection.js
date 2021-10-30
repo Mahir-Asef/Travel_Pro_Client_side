@@ -8,7 +8,7 @@ const TripSection = () => {
     const [trips, setTrips] = useState([]);
   
     useEffect(() => {
-      fetch("http://localhost:5000/trips")
+      fetch("https://pure-gorge-03532.herokuapp.com/trips")
         .then((res) => res.json())
         .then((data) => setTrips(data))
         .catch((err) => console.log(err));

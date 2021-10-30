@@ -15,7 +15,7 @@ const AddTrips = () => {
   
     const onSubmit = (data) => {
       data.email = user?.email;
-      fetch("http://localhost:5000/addEvent", {
+      fetch("https://pure-gorge-03532.herokuapp.com/addEvent", {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify(data),
