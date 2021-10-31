@@ -24,7 +24,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="footer-text">
-                <small className="text-center ">Copyright Union Medical ©2021 Doctor Appointment, Hospital and Ambulance Service. All Rights Reserved</small>
+                <small className="text-center ">©Copyright 2021. All Rights Reserved by Travel Pro.</small>
             </div>
         </div>
     );

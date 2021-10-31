@@ -1,0 +1,11 @@
+.all-trip {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  
+  @media only screen and (max-width: 426px) {
+    .all-trip {
+      grid-template-columns: 1fr;
+    }
+  }

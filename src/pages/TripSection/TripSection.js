@@ -8,10 +8,9 @@ const TripSection = () => {
     const [trips, setTrips] = useState([]);
   
     useEffect(() => {
-      fetch("https://pure-gorge-03532.herokuapp.com/trips")
+      fetch("http://localhost:5000/trips")
         .then((res) => res.json())
         .then((data) => setTrips(data))
-        .catch((err) => console.log(err));
     }, []);
   
     return (
@@ -22,7 +21,7 @@ const TripSection = () => {
             <Trip trip={trip} key={trips._id}></Trip>
           ))}
         </div>
-        <NavLink to="/trips">
+        <NavLink to="/alltrips">
           <Button className="see-more btn-danger">See more</Button>
         </NavLink>
       </div>

@@ -15,6 +15,9 @@ import PrivateRoute from './pages/PrivateRoute/PrivateRoute';
 import NotFound from './pages/NotFound/NotFound';
 import TripDetails from './pages/TripDetails/TripDetails';
 import AddTrips from './pages/AddTrips/AddTrips';
+import MyTrips from './pages/MyTrips/MyTrips';
+import AllTrips from './pages/AllTrips/AllTrips';
+import AllOrders from './pages/AllOrders/AllOrders';
 
 
 function App() {
@@ -33,14 +36,23 @@ function App() {
         <Route path="/aboutus">
           <About></About>
         </Route>
-        <Route path="/tripdetail/:id">
-          <TripDetails></TripDetails>
+        <Route path="/alltrips">
+          <AllTrips></AllTrips>
         </Route>
+        <PrivateRoute path="/tripdetail/:id">
+          <TripDetails></TripDetails>
+        </PrivateRoute>
         <Route path="/addtrips">
           <AddTrips></AddTrips>
         </Route>
+        <Route path="/mytrips">
+          <MyTrips></MyTrips>
+        </Route>
+        <Route path="/allorders">
+          <AllOrders></AllOrders>
+        </Route>
         <Route path="/login">
-        <Login></Login>
+          <Login></Login>
         </Route>
         <Route path="*">
           <NotFound></NotFound>

@@ -3,10 +3,13 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useParams } from "react-router-dom";
 import { Button } from "react-bootstrap";
-import './TripDetails.css';
+import "./TripDetails.css";
+import useAuth from './../../hooks/useAuth';
+import useCart from './../../hooks/useCart';
 const TripDetails = () => {
   const { id } = useParams();
   const [trip, setTrip] = useState([]);
+  const { addToCart, AllContexts } = useCart();
 
   useEffect(() => {
     fetch(`https://pure-gorge-03532.herokuapp.com/trips/${id}`)
@@ -21,11 +24,7 @@ const TripDetails = () => {
 
       <div className="trip-hero">
         <div className="trip-hero-bg">
-          <img
-            src={trip.img}
-            alt=""
-            className="trip-background"
-          />
+          <img src={trip.img} alt="" className="trip-background" />
         </div>
         <div className="trip-hero-title">
           <h1 className="trip-caption mb-sm-3">{trip.city}</h1>
@@ -37,7 +36,9 @@ const TripDetails = () => {
 
       <div className="container details-container my-5">
         <div className="text-start">
-          <h2>{trip.city}, {trip.country}</h2>
+          <h2>
+            {trip.city}, {trip.country}
+          </h2>
           <p className="details">{trip.description}</p>
         </div>
         <div className="ms-5">
@@ -49,19 +50,23 @@ const TripDetails = () => {
               <p className="details">Age:</p>
             </div>
             <div className="ms-3 text-end">
-              <p className="fw-bold details">
-                ${trip.price} / Person
+              <p className="fw-bold details">${trip.price} / Person</p>
+              <p className="details">
+                {trip.city}, {trip.country}
               </p>
-              <p className="details">{trip.city}, {trip.country}</p>
               <p className="details">{trip.duration}</p>
               <p className="details">{trip.age}</p>
             </div>
           </div>
-          <Button className="login w-100">Book Now<FontAwesomeIcon icon={faArrowRight} className=" ms-2" /></Button>
+          <button
+            onClick={() => addToCart(trip)}
+            className="login text-white w-100"
+          >
+            Book Now
+            <FontAwesomeIcon icon={faArrowRight} className=" ms-2" />
+          </button>
         </div>
       </div>
-
-      
     </div>
   );
 };

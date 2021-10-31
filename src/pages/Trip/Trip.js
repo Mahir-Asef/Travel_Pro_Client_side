@@ -2,8 +2,8 @@ import react from 'react';
 import { NavLink } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 import './Trip.css';
-const Trip = (props) => {
-    const {_id, city, country, img, description, duration, age, price} = props.trip;
+const Trip = ({trip}) => {
+    const {_id, city, country, img, description, duration, age, price} = trip;
   
     return (
       <div className="item d-flex flex-column">

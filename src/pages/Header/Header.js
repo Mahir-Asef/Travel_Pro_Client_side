@@ -28,21 +28,18 @@ const Header = () => {
             <NavLink className="nav-item ms-5" to="/aboutus">
             AboutUs
             </NavLink>
-            {/* <NavLink className="nav-item ms-5" to="/tripdetails">
-            Trip details
-            </NavLink> */}
+            <NavLink className="nav-item ms-5" to="/alltrips">
+            All Trips
+            </NavLink>
             <NavLink className="nav-item ms-5" to="/addtrips">
             Add trips
             </NavLink>
-            { user.displayName && <NavLink className="nav-item ms-5" to="/myorder">
-              My Order
+            { user.displayName && <NavLink className="nav-item ms-5" to="/mytrips">
+              My Trips
             </NavLink>}
-            { user.displayName && <NavLink className="nav-item ms-5" to="/allorder">
-             All order
+            { user.displayName && <NavLink className="nav-item ms-5" to="/allorders">
+              All Orders
             </NavLink>}
-            <NavLink className="nav-item ms-5" to="/gallery">
-              Gallery
-            </NavLink>
             { 
               user.displayName ?
               <NavLink to="/login" className="ms-5" >

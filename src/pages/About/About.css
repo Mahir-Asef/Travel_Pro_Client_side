@@ -10,6 +10,25 @@
     margin:20px;
     transition: .5s;
 }
+.banner-about{
+    width: 100%;
+    height: 300px;
+}
+.about-img{
+    width: 400px;
+    height: 300px;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+}
+.about-text{
+    color:black;
+    
+    padding-bottom: 15px;
+}
+.text-trip{
+    color: black;
+}
 .about-card:hover{
     box-shadow: 10px 10px 10px  lightgray;
 }
