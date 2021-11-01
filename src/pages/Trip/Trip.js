@@ -14,7 +14,7 @@ const Trip = ({trip}) => {
           <h5 className="price fw-normal mb-3">Price: ${price}</h5>
         </div>
         <NavLink className="mt-auto" to={`/tripdetail/${_id}`}>
-          <Button className="buy-now btn-success mb-4">Book Now</Button>
+          <Button className="buy-now btn-warning text-white mb-4">Book your trip</Button>
         </NavLink>
       </div>
     );

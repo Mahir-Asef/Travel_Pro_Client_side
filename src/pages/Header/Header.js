@@ -31,14 +31,14 @@ const Header = () => {
             <NavLink className="nav-item ms-5" to="/alltrips">
             All Trips
             </NavLink>
-            <NavLink className="nav-item ms-5" to="/addtrips">
-            Add trips
-            </NavLink>
             { user.displayName && <NavLink className="nav-item ms-5" to="/mytrips">
               My Trips
             </NavLink>}
             { user.displayName && <NavLink className="nav-item ms-5" to="/allorders">
-              All Orders
+              All Bookings
+            </NavLink>}
+            {user.displayName && <NavLink className="nav-item ms-5" to="/addtrips">
+            Add trips
             </NavLink>}
             { 
               user.displayName ?

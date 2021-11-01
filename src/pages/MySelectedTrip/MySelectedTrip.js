@@ -18,17 +18,17 @@ const MySelectedTrip = ({ mySelection }) => {
 
   return (
     <div className="selected-product d-flex flex-column">
-      <img className="selected-tour-img" src={img} alt="" />
+      <img className="selected-trip-img" src={img} alt="" />
       <div className="mx-3">
-        <h3 className="product-name fw-bolder fs-1 mt-3">
+        <h3 className=" text-danger fw-bolder fs-1 mt-3">
           {city}, {country}
         </h3>
         <p className="details mt-3">{description.slice(0, 150)}...</p>
         <h5 className="price fw-normal mb-3">Price: ${price}</h5>
       </div>
 
-      <button onClick={() => cancel(_id)} className="buy-now mb-4">
-        Remove
+      <button onClick={() => cancel(_id)} className="buy-now btn btn-danger mb-4">
+        Cancel booking
       </button>
     </div>
   );

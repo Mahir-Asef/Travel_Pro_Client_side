@@ -8,14 +8,15 @@ const AddTrips = () => {
     const { user } = useAuth();
     const {
       register,
+      reset,
       handleSubmit,
       watch,
       formState: { errors },
     } = useForm();
   
     const onSubmit = (data) => {
-      data.email = user?.email;
-      fetch("https://spooky-nightmare-94517.herokuapp.com/addEvent", {
+      // data.email = user?.email;
+      fetch("https://spooky-nightmare-94517.herokuapp.com/trips", {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify(data),
@@ -23,6 +24,8 @@ const AddTrips = () => {
         .then((res) => res.json())
         .then((result) => console.log(result));
       console.log(data);
+      alert("New trip Successfully added")
+      reset();
     };
     return (
       <div>
@@ -51,7 +54,7 @@ const AddTrips = () => {
                 <br />
   
                 <input
-                  {...register("image", { required: true })}
+                  {...register("img", { required: true })}
                   placeholder="Image Link"
                   className="p-2 me-1 mt-2 input-style border border-2 rounded border-primary"
                 />

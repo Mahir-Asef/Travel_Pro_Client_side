@@ -21,7 +21,7 @@ const HeroSection = () => {
           <p className=" hero-details-text text-white mb-sm-5">
             We are here to provide you best service.Your requirement is our first priority.
           </p>
-          <NavLink to="/login"><Button className="btn-light" >Login Here</Button></NavLink>
+          <NavLink to="/login"><Button className="btn-danger" >Login Here</Button></NavLink>
         </div>
       </div>
   

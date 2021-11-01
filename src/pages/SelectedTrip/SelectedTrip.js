@@ -19,7 +19,7 @@ const SelectedTrip = ({ selectedTrip }) => {
     <div className="selected-product d-flex flex-column">
       <img className="selected-tour-img" src={img} alt="" />
       <div className="mx-3">
-        <h3 className="product-name fw-bolder fs-1 mt-3">
+        <h3 className="text-danger fw-bolder fs-1 mt-3">
           {city}, {country}
         </h3>
         <p className="details mt-3">{description.slice(0, 150)}...</p>

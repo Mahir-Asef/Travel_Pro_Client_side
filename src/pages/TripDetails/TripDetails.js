@@ -20,7 +20,6 @@ const TripDetails = () => {
 
   return (
     <div>
-      {/* HEADER */}
 
       <div className="trip-hero">
         <div className="trip-hero-bg">
@@ -43,28 +42,22 @@ const TripDetails = () => {
         </div>
         <div className="ms-5">
           <div className="d-flex text-start ms-auto info-container">
-            <div>
-              <p className="fw-bold details">Price:</p>
-              <p className="details">Destination:</p>
-              <p className="details">Duration:</p>
-              <p className="details">Age:</p>
-            </div>
-            <div className="ms-3 text-end">
-              <p className="fw-bold details">${trip.price} / Person</p>
-              <p className="details">
-                {trip.city}, {trip.country}
-              </p>
-              <p className="details">{trip.duration}</p>
-              <p className="details">{trip.age}</p>
-            </div>
-          </div>
-          <button
+            <div className="booking-section">
+              <p className="fw-bold details">Price: ${trip.price}/traveler</p>
+              <p className="details">Destination: {trip.city}, {trip.country}</p>
+              <p className="details">Duration: {trip.duration}</p>
+              <p className="details">Age: {trip.age}</p>
+              <button
             onClick={() => addToCart(trip)}
-            className="login text-white w-100"
+            className="btn btn-primary text-white w-100"
           >
-            Book Now
+            Book Trip
             <FontAwesomeIcon icon={faArrowRight} className=" ms-2" />
           </button>
+            </div>
+            
+          </div>
+          
         </div>
       </div>
     </div>
