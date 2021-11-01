@@ -8,7 +8,7 @@ const useCart = () => {
   const [mySelectedTrips, setMySelectedTrips] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/cart")
+    fetch("https://spooky-nightmare-94517.herokuapp.com/cart")
       .then((res) => res.json())
       .then((data) => {
         if (data.length) {
@@ -25,7 +25,7 @@ const useCart = () => {
     trip.uid = uid;
     trip.status = "pending";
 
-    fetch("http://localhost:5000/cart", {
+    fetch("https://spooky-nightmare-94517.herokuapp.com/cart", {
       method: "post",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(trip),
@@ -45,7 +45,7 @@ const useCart = () => {
   const cancel = (id) => {
     const confirm = window.confirm("Are you sure?");
     if (confirm) {
-      fetch(`http://localhost:5000/delete/${id}`, {
+      fetch(`https://spooky-nightmare-94517.herokuapp.com/delete/${id}`, {
         method: "delete",
       })
         .then((res) => res.json())

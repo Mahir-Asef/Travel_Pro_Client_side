@@ -12,7 +12,7 @@ const TripDetails = () => {
   const { addToCart, AllContexts } = useCart();
 
   useEffect(() => {
-    fetch(`https://pure-gorge-03532.herokuapp.com/trips/${id}`)
+    fetch(`https://spooky-nightmare-94517.herokuapp.com/trips/${id}`)
       .then((res) => res.json())
       .then((data) => setTrip(data))
       .catch((err) => console.log(err));
