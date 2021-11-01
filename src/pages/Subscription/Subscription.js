@@ -17,8 +17,8 @@ const Subscription = () => {
       </h1>
       <form onSubmit={handleSubmit(onSubmit)}>
       
-      <input className="w-50 border-2 me-2  rounded p-2" {...register("exampleRequired", { required: true })} />
-      <input type="submit" className="btn btn-danger mb-2 px-5  rounded p-2" />
+      <input className="w-50 border-2 me-2  rounded p-2" {...register("exampleRequired", { required: true })} placeholder="your email" />
+      <input type="submit" value="subscribe" className="btn btn-danger mb-2 px-5  rounded p-2" />
       <br />
       {errors.exampleRequired && <span className="text-danger fw-1 fs-3">This field is required</span>}
       
